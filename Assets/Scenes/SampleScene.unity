@@ -148,10 +148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3b9e7a26abb3e641a23701d9d1a618a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _width: 13
-  _height: 13
-  _floorPrefab: {fileID: 4864603852341488806, guid: 3a4724126b94bb6409f6d8f925cb02c0, type: 3}
-  _cam: {fileID: 519420032}
+  width: 13
+  height: 13
+  TilePrefab: {fileID: 4423246373496294515, guid: 3a4724126b94bb6409f6d8f925cb02c0, type: 3}
+  WallPrefab: {fileID: 4529230033966129344, guid: 7cfeff4da7580a14b9119fa9d2708922, type: 3}
+  cam: {fileID: 519420032}
 --- !u!4 &348988427
 Transform:
   m_ObjectHideFlags: 0
@@ -203,7 +204,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.3509434, g: 0.16394135, b: 0.1582556, a: 0}
+  m_BackGroundColor: {r: 0.39215687, g: 0.14901961, b: 0.15686275, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -228,7 +229,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

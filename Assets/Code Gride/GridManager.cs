@@ -4,28 +4,49 @@ using UnityEngine;
 
 public class GridManager : MonoBehaviour
 {
-    [SerializeField] private int _width , _height;
+   [SerializeField] private int width , height;
 
-    [SerializeField] private Floor _floorPrefab;
+   [SerializeField] private Tile TilePrefab;
 
-    [SerializeField] private Transform _cam;
+   [SerializeField] public Wall WallPrefab;
+
+   [SerializeField] private Transform cam;
 
 
     void Start(){
-        GenerateGride();
+      GenerateGride();
+      Test();
     }
-    
+
+
+
     void GenerateGride() {
-        for (int x = 0; x < _width; x++){
-            for (int y = 0; y < _height; y++){
-                var spawnedFloor = Instantiate(_floorPrefab,new Vector3(x, y), Quaternion.identity);
-                spawnedFloor.name = $"Floor {x} {y}";
-                
+        for (int x = 0; x < width; x++){
+            for (int y = 0; y < height; y++){
+                var spawnedTile = Instantiate(TilePrefab,new Vector3(x, y), Quaternion.identity);
+                spawnedTile.name = $"Tile {x} {y}";
+
             }
         }
 
-        _cam.transform.position = new Vector3((float)_width/2 -0.5f, (float)_height/2 -0.5f,-10);
-       
+        cam.transform.position = new Vector3((float)width/2 -0.5f, (float)height/2 -0.5f,-10);
+
     }
-        
+
+
+   void Test() {
+
+        Instantiate(WallPrefab, new Vector3(6, 12), Quaternion.identity);
+        Instantiate(WallPrefab, new Vector3(2, 11), Quaternion.identity);
+        Instantiate(WallPrefab, new Vector3(10, 10), Quaternion.identity);
+        Instantiate(WallPrefab, new Vector3(4, 9), Quaternion.identity);
+        Instantiate(WallPrefab, new Vector3(3, 8), Quaternion.identity);
+        Instantiate(WallPrefab, new Vector3(8, 9), Quaternion.identity);
+        Instantiate(WallPrefab, new Vector3(9, 8), Quaternion.identity);
+
+   }
+    
+    
+
+
 }
