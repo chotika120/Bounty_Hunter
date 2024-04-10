@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SelectBoom
+  - SelectShoot
+  - SelectWalk
+  - P1
+  - P2
+  - P3
+  - P4
   layers:
   - Default
   - TransparentFX
