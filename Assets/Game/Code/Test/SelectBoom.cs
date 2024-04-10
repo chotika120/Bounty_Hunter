@@ -27,6 +27,8 @@ public class SelectBoom : MonoBehaviour
         {
             ActionScript.Boom -= 1;
 
+            ActionScript.TBoom();
+
             ItemBoom.SetActive(true);
             SelectArea.SetActive(false);
 

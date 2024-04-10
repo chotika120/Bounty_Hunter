@@ -24,6 +24,9 @@ public class SelectWalk : MonoBehaviour
                 ActionScript.ShotGun += 1;
                 ActionScript.Shot -= 1;
 
+                ActionScript.TShotGun();
+                ActionScript.TShot();
+
             }
 
         }

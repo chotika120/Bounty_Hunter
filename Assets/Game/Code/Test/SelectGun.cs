@@ -24,6 +24,8 @@ public class SelectGun : MonoBehaviour
         {
             ActionScript.ShotGun -= 1;
 
+            ActionScript.TShotGun();
+
             SelectArea.SetActive(false);
 
     

@@ -22,7 +22,7 @@ public class ActionBoom : MonoBehaviour
         WalkScript = GameObject.FindFirstObjectByType<SelectWalk>();
     }
 
-    void Update()
+    public void TBoom()
     {
         foreach (Image img in BoomImg)
         { 

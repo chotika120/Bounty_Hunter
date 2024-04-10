@@ -27,14 +27,6 @@ public class ActionGun : MonoBehaviour
         WalkScript = GameObject.FindFirstObjectByType<SelectWalk>();
     }
 
-
-    void Update()
-    {
-        TShotGun();
-        TShot();
-    }
-
-
     public void TShotGun()
     {
         foreach (Image img in ShotGunImg)
