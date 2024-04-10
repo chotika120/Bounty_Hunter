@@ -75,6 +75,7 @@ public class ActionGun : MonoBehaviour
 
     public void GunArea()
     {
+        
         if(ShotGun == 1)
         {
             AreaGun.SetActive(true);
@@ -85,5 +86,6 @@ public class ActionGun : MonoBehaviour
                 ActionScript.AreaBoom.SetActive(false);
             }
         }
+        
     }
 }

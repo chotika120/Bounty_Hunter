@@ -10,6 +10,7 @@ public class ActionWalk : MonoBehaviour
     private ActionBoom BoomScript;
     private ActionGun GunScript;
 
+
     void Start() 
     {
        ActionScript = GameObject.FindFirstObjectByType<SelectWalk>();

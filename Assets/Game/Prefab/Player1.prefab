@@ -176,4 +176,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerWalk: {fileID: 3009109467323290545}
-  AreaOther: []
