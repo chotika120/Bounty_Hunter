@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7267521620093704484}
   - component: {fileID: 7762718882417957635}
   - component: {fileID: 6537770839134699706}
-  - component: {fileID: 4013033847516764595}
   m_Layer: 0
   m_Name: SelectWalk
   m_TagString: SelectWalk
@@ -134,16 +133,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4013033847516764595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 279054566388404285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c50bb7ab99477ed4b834eba4db0b36f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SelectArea: {fileID: 279054566388404285}
