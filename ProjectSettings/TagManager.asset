@@ -7,10 +7,10 @@ TagManager:
   - SelectBoom
   - SelectShoot
   - SelectWalk
-  - P1
-  - P2
-  - P3
-  - P4
+  - Player1
+  - Player2
+  - Player3
+  - Player4
   layers:
   - Default
   - TransparentFX
