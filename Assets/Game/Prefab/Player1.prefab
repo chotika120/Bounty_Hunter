@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8341668166725486226}
   - component: {fileID: 8523934807518829315}
   - component: {fileID: 410382236217408872}
-  - component: {fileID: 5121601531017043681}
+  - component: {fileID: 4637276829690433876}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player
@@ -163,7 +163,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5121601531017043681
+--- !u!114 &4637276829690433876
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,5 +175,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8fa1754b2755a4492e1a9e07276f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TMove: {fileID: 279054566388404285, guid: 540b8eacda216094c83fd7a130e9018d, type: 3}
-  tilemap: {fileID: 0}
+  TileMove: {fileID: 279054566388404285, guid: 540b8eacda216094c83fd7a130e9018d, type: 3}
+  Player_Position: {x: 0, y: 12, z: 0}
