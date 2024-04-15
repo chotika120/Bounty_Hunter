@@ -19,14 +19,14 @@ public class GameManager : MonoBehaviour
 
     void PlayerSpawn()
     {
-        // //Test 01
-        // Player1.GetComponent<PlayerManager>().P_Position= new Vector3Int(6, 6, 0);
-        // Vector3 P1_Position = tilemap.GetCellCenterWorld(new Vector3Int(6, 6, 0));
-        // Instantiate(Player1, P1_Position, Quaternion.identity);
-
-        Player1.GetComponent<PlayerManager>().P_Position= new Vector3Int(0, 12, 0);
-        Vector3 P1_Position = tilemap.GetCellCenterWorld(new Vector3Int(0, 12, 0));
+        //Test 01
+        Player1.GetComponent<PlayerManager>().P_Position= new Vector3Int(6, 6, 0);
+        Vector3 P1_Position = tilemap.GetCellCenterWorld(new Vector3Int(6, 6, 0));
         Instantiate(Player1, P1_Position, Quaternion.identity);
+
+        // Player1.GetComponent<PlayerManager>().P_Position= new Vector3Int(0, 12, 0);
+        // Vector3 P1_Position = tilemap.GetCellCenterWorld(new Vector3Int(0, 12, 0));
+        // Instantiate(Player1, P1_Position, Quaternion.identity);
         
 
         Player2.GetComponent<PlayerManager>().P_Position= new Vector3Int(0, 0, 0);

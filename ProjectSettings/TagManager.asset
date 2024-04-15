@@ -6,11 +6,13 @@ TagManager:
   tags:
   - SelectBoom
   - SelectShoot
-  - SelectWalk
   - Player1
   - Player2
   - Player3
   - Player4
+  - TileMove
+  - SelectWalk
+  - TileGun
   layers:
   - Default
   - TransparentFX

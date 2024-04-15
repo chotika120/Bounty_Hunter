@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2064231673997049273}
   - component: {fileID: 8341668166725486226}
-  - component: {fileID: 8523934807518829315}
+  - component: {fileID: 6798363606776850261}
   - component: {fileID: 410382236217408872}
   - component: {fileID: 4637276829690433876}
   m_Layer: 0
@@ -90,7 +90,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8523934807518829315
+--- !u!61 &6798363606776850261
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,7 +124,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.0020281672}
+  m_Offset: {x: 0.0019715726, y: -0.0019715428}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -134,7 +134,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1.0851814}
+  m_Size: {x: 0.7626659, y: 1.0938748}
   m_EdgeRadius: 0
 --- !u!50 &410382236217408872
 Rigidbody2D:
@@ -176,4 +176,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TileMove: {fileID: 279054566388404285, guid: 540b8eacda216094c83fd7a130e9018d, type: 3}
-  P_Position: {x: 0, y: 12, z: 0}
+  TileGun: {fileID: 2718473411637107580, guid: 4c3d3469abe3d2140b241fa04c2525cb, type: 3}
+  P_Position: {x: 6, y: 6, z: 0}

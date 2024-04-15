@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 public class PlayerManager : MonoBehaviour
 {
     public GameObject TileMove;
+    public GameObject TileGun;
     private GameManager Code_GameManager;
     public Vector3 P_Position;
 
@@ -21,13 +22,16 @@ public class PlayerManager : MonoBehaviour
 
         if(gameObject.CompareTag("Player1") || gameObject.CompareTag("Player2") || gameObject.CompareTag("Player3") || gameObject.CompareTag("Player4"))
         {
+            //AreaPosition_Gun();   //Test ปืน
+            
             AreaPosition_Player();
             Debug.Log(gameObject.tag);
-        }
+        };
         
     }
 
 
+//Area Player
     void AreaPosition_Player()
     {
         // TileMove Right
@@ -55,6 +59,39 @@ public class PlayerManager : MonoBehaviour
         if((int)P_Position.y != 12)
         {
             Instantiate(TileMove, Code_GameManager.tilemap.GetCellCenterWorld(new Vector3Int((int)P_Position.x, (int)P_Position.y + 1, 0)), Quaternion.identity);   
+        };
+
+    }
+
+
+    void AreaPosition_Gun()
+    {
+    
+        // TileGun Right
+        for (int i = (int)P_Position.x + 1; i <= 12; i++)
+        {
+            Instantiate(TileGun, Code_GameManager.tilemap.GetCellCenterWorld(new Vector3Int(i,(int)P_Position.y, 0)), Quaternion.identity);
+        };
+
+
+        // TileGun Left
+        for (int i = (int)P_Position.x - 1; i >= 0; i--)
+        {
+            Instantiate(TileGun, Code_GameManager.tilemap.GetCellCenterWorld(new Vector3Int(i,(int)P_Position.y, 0)), Quaternion.identity);
+        };
+
+
+        // TileMove Down
+        for (int i = (int)P_Position.y - 1; i >= 0; i--)
+        {
+            Instantiate(TileGun, Code_GameManager.tilemap.GetCellCenterWorld(new Vector3Int((int)P_Position.x, i, 0)), Quaternion.identity);
+        };
+
+
+        // TileMove Up
+        for (int i = (int)P_Position.y + 1; i <= 12; i++)
+        {
+            Instantiate(TileGun, Code_GameManager.tilemap.GetCellCenterWorld(new Vector3Int((int)P_Position.x, i, 0)), Quaternion.identity);
         };
 
     }
