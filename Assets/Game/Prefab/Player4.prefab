@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3428282194934119035}
   - component: {fileID: 9068347835896304075}
-  - component: {fileID: 6807138581269558083}
   - component: {fileID: 6308957397239557664}
   - component: {fileID: 8542676055397837103}
+  - component: {fileID: 1830517087250596716}
   m_Layer: 0
   m_Name: Player4
   m_TagString: Player4
@@ -90,52 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6807138581269558083
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2156749262843397745}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -0.007795036, y: 0.0025983155}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1.3125}
-    newSize: {x: 0.8125, y: 1.125}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.9855257, y: 1.2869349}
-  m_EdgeRadius: 0
 --- !u!50 &6308957397239557664
 Rigidbody2D:
   serializedVersion: 4
@@ -177,4 +131,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TileMove: {fileID: 279054566388404285, guid: 540b8eacda216094c83fd7a130e9018d, type: 3}
   TileGun: {fileID: 2718473411637107580, guid: 4c3d3469abe3d2140b241fa04c2525cb, type: 3}
+  TileBoom: {fileID: 7165182521769320574, guid: 04da4be964cbdcc46b0935dce60db0a4,
+    type: 3}
+  Code_GameManager: {fileID: 0}
   P_Position: {x: 12, y: 12, z: 0}
+--- !u!70 &1830517087250596716
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2156749262843397745}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 1.3125}
+  m_Direction: 0

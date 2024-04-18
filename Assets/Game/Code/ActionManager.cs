@@ -5,14 +5,20 @@ using UnityEngine.UI;
 
 public class ActionManager : MonoBehaviour
 {
+    // UI Action Gun
     public int ShotGun = 1;
     public int Shot = 5;
-
-
     public Image[] ShotGunImg;
     public Image[] ShotImg;
     public Sprite FullShot;
     public Sprite EmptyShot;
+
+
+    // UI Action Boom
+    public int Boom = 1;
+    public Image[] BoomImg;
+    public Sprite FullBoom;
+    public Sprite EmptyBoom;
 
 
     private PlayerManager Code_PlayerManager;
@@ -56,17 +62,54 @@ public class ActionManager : MonoBehaviour
     }
 
 
+    public void Action_Boom()
+    {
+        foreach (Image img in BoomImg)
+        { 
+            img.sprite = EmptyBoom;
+        }
+        for (int i = 0; i < Boom; i++)
+        {
+            BoomImg[i].sprite = FullBoom;
+        }
+
+
+        if(Boom < 1)
+        {
+            Debug.Log("Boom = 0");
+        }
+    }
+
+
+
+
     public void SetPlayer(GameObject Player)
     {
         Code_PlayerManager = Player.GetComponent<PlayerManager>();
     }
 
-    public void OnButtonClick()
+    public void AreaGun()
     {
-        if (Code_PlayerManager.CompareTag("Player1"))
+        if (Code_PlayerManager.CompareTag("Player1") || Code_PlayerManager.CompareTag("Player2") || Code_PlayerManager.CompareTag("Player3") || Code_PlayerManager.CompareTag("Player4"))
         {
-            Code_PlayerManager.AreaPosition_Boom();
-            Debug.Log("P1");
+            if(ShotGun == 1)
+            {
+                Code_PlayerManager.AreaPosition_Gun();
+                Debug.Log(gameObject.tag);
+            }
+        }
+    }
+
+
+    public void AreaBoom()
+    {
+        if (Code_PlayerManager.CompareTag("Player1") || Code_PlayerManager.CompareTag("Player2") || Code_PlayerManager.CompareTag("Player3") || Code_PlayerManager.CompareTag("Player4"))
+        {
+            if(Boom == 1)
+            {
+                Code_PlayerManager.AreaPosition_Boom();
+                Debug.Log(gameObject.tag);
+            }
         }
     }
 

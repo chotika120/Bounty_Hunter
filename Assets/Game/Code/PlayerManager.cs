@@ -7,13 +7,14 @@ public class PlayerManager : MonoBehaviour
 {
     public GameObject TileMove;
     public GameObject TileGun;
+    public GameObject TileBoom;
     public GameManager Code_GameManager;
 
     public Vector3 P_Position;
     
 
 
-    public void SetGaManager(GameManager gameSet) 
+    public void SetGameManager(GameManager gameSet) 
     {
         Code_GameManager = gameSet;
     }
@@ -23,24 +24,17 @@ public class PlayerManager : MonoBehaviour
     {
 
         if(gameObject.CompareTag("Player1") || gameObject.CompareTag("Player2") || gameObject.CompareTag("Player3") || gameObject.CompareTag("Player4"))
-        // if(gameObject.CompareTag("Player"))
         {
-            // AreaPosition_Gun();  //Test ปืน
-
-            //AreaPosition_Boom();  //Test ระเบิด
-            
             AreaPosition_Player();
             Debug.Log(gameObject.tag);
-        }
+        };
         
     }
 
 
 //Area Player
-    void AreaPosition_Player()
+    public void AreaPosition_Player()
     {
-
-        
         // TileMove Right
         if((int)P_Position.x != 12)
         {
@@ -108,30 +102,19 @@ public class PlayerManager : MonoBehaviour
 
     public void AreaPosition_Boom()
     {
-        if(Code_GameManager == null)
-            {
-                Debug.Log(" Oh nooo");
-            }
-        
-        if(TileGun == null)
-            {
-                Debug.Log(" Tile Gun Oh nooo");
-            }
-
-
         for (int i = 1; i <= 3; i++)
         {
 
             // TileBoom Up
             if((int)P_Position.y + i <= 12)
             {
-                Instantiate(TileGun, Code_GameManager.tilemap.GetCellCenterWorld(new Vector3Int((int)P_Position.x,(int)P_Position.y + i, 0)), Quaternion.identity);
+                Instantiate(TileBoom, Code_GameManager.tilemap.GetCellCenterWorld(new Vector3Int((int)P_Position.x,(int)P_Position.y + i, 0)), Quaternion.identity);
             }
 
             // TileBoom Down
             if((int)P_Position.y - i >= 0)
             {
-                Instantiate(TileGun, Code_GameManager.tilemap.GetCellCenterWorld(new Vector3Int((int)P_Position.x,(int)P_Position.y - i, 0)), Quaternion.identity);
+                Instantiate(TileBoom, Code_GameManager.tilemap.GetCellCenterWorld(new Vector3Int((int)P_Position.x,(int)P_Position.y - i, 0)), Quaternion.identity);
             }
 
             ///////////
@@ -142,7 +125,7 @@ public class PlayerManager : MonoBehaviour
             // TileBoom Right(Up)
             if((int)P_Position.x + i <= 12 && (int)P_Position.y + n <= 12)
             {
-                Instantiate(TileGun, Code_GameManager.tilemap.GetCellCenterWorld(new Vector3Int((int)P_Position.x + i,(int)P_Position.y + n, 0)), Quaternion.identity);
+                Instantiate(TileBoom, Code_GameManager.tilemap.GetCellCenterWorld(new Vector3Int((int)P_Position.x + i,(int)P_Position.y + n, 0)), Quaternion.identity);
             }
 
             
@@ -150,7 +133,7 @@ public class PlayerManager : MonoBehaviour
             // TileBoom Left(Down)
             if((int)P_Position.x - i >= 0 && (int)P_Position.y + n <= 12)
             {
-                Instantiate(TileGun, Code_GameManager.tilemap.GetCellCenterWorld(new Vector3Int((int)P_Position.x - i,(int)P_Position.y + n, 0)), Quaternion.identity);
+                Instantiate(TileBoom, Code_GameManager.tilemap.GetCellCenterWorld(new Vector3Int((int)P_Position.x - i,(int)P_Position.y + n, 0)), Quaternion.identity);
             }
 
             }
@@ -163,7 +146,7 @@ public class PlayerManager : MonoBehaviour
             // TileBoom Right(Down)
             if((int)P_Position.x + i <= 12 && (int)P_Position.y - n >= 0)
             {
-                Instantiate(TileGun, Code_GameManager.tilemap.GetCellCenterWorld(new Vector3Int((int)P_Position.x + i,(int)P_Position.y - n, 0)), Quaternion.identity);
+                Instantiate(TileBoom, Code_GameManager.tilemap.GetCellCenterWorld(new Vector3Int((int)P_Position.x + i,(int)P_Position.y - n, 0)), Quaternion.identity);
             }
 
             
@@ -171,7 +154,7 @@ public class PlayerManager : MonoBehaviour
             // TileBoom Left(Up)
             if((int)P_Position.x - i >= 0 && (int)P_Position.y - n >= 0)
             {
-                Instantiate(TileGun, Code_GameManager.tilemap.GetCellCenterWorld(new Vector3Int((int)P_Position.x - i,(int)P_Position.y - n, 0)), Quaternion.identity);
+                Instantiate(TileBoom, Code_GameManager.tilemap.GetCellCenterWorld(new Vector3Int((int)P_Position.x - i,(int)P_Position.y - n, 0)), Quaternion.identity);
             }
 
             }

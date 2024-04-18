@@ -4,16 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - SelectBoom
-  - SelectShoot
   - Player1
   - Player2
   - Player3
   - Player4
   - TileMove
-  - SelectWalk
   - TileGun
-  - Test
+  - TileBoom
   layers:
   - Default
   - TransparentFX

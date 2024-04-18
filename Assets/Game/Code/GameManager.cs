@@ -12,14 +12,23 @@ public class GameManager : MonoBehaviour
 
     public Tilemap tilemap;
 
-    public ActionManager Code_ActionManager;
+    public ActionManager P1_ActionManager, P2_ActionManager, P3_ActionManager, P4_ActionManager;
 
     void Start()
     {
         PlayerSpawn();
-        Code_ActionManager.SetPlayer(Player1);
 
-        Player1.GetComponent<PlayerManager>().SetGaManager(this);
+        P1_ActionManager.SetPlayer(Player1);
+        Player1.GetComponent<PlayerManager>().SetGameManager(this);
+
+        P2_ActionManager.SetPlayer(Player2);
+        Player2.GetComponent<PlayerManager>().SetGameManager(this);
+
+        P3_ActionManager.SetPlayer(Player3);
+        Player3.GetComponent<PlayerManager>().SetGameManager(this);
+
+        P4_ActionManager.SetPlayer(Player4);
+        Player4.GetComponent<PlayerManager>().SetGameManager(this);
     }
 
     public void PlayerSpawn()
