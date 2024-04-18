@@ -177,4 +177,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TileMove: {fileID: 279054566388404285, guid: 540b8eacda216094c83fd7a130e9018d, type: 3}
   TileGun: {fileID: 2718473411637107580, guid: 4c3d3469abe3d2140b241fa04c2525cb, type: 3}
-  P_Position: {x: 6, y: 6, z: 0}
+  P_Position: {x: 9, y: 6, z: 0}

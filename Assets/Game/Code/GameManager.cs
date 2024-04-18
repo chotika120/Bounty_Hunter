@@ -12,17 +12,24 @@ public class GameManager : MonoBehaviour
 
     public Tilemap tilemap;
 
+    public ActionManager Code_ActionManager;
+
     void Start()
     {
         PlayerSpawn();
+        Code_ActionManager.SetPlayer(Player1);
+
+        Player1.GetComponent<PlayerManager>().SetGaManager(this);
     }
 
-    void PlayerSpawn()
+    public void PlayerSpawn()
     {
+
         //Test 01
-        Player1.GetComponent<PlayerManager>().P_Position= new Vector3Int(6, 6, 0);
-        Vector3 P1_Position = tilemap.GetCellCenterWorld(new Vector3Int(6, 6, 0));
+        Player1.GetComponent<PlayerManager>().P_Position= new Vector3Int(9, 6, 0);
+        Vector3 P1_Position = tilemap.GetCellCenterWorld(new Vector3Int(9, 6, 0));
         Instantiate(Player1, P1_Position, Quaternion.identity);
+
 
         // Player1.GetComponent<PlayerManager>().P_Position= new Vector3Int(0, 12, 0);
         // Vector3 P1_Position = tilemap.GetCellCenterWorld(new Vector3Int(0, 12, 0));

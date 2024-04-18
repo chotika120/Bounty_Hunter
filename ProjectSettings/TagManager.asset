@@ -13,6 +13,7 @@ TagManager:
   - TileMove
   - SelectWalk
   - TileGun
+  - Test
   layers:
   - Default
   - TransparentFX
